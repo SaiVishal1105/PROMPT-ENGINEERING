@@ -670,4 +670,25 @@ A **Large Language Model (LLM)** is a deep learning model trained on massive amo
 
 Building a modern, instruction-following LLM involves four distinct sequential stages:
 
-# Result
+# Conclusion
+## Comparison of ChatGPT and Gemini
+
+| Criteria | ChatGPT | Gemini | Reason |
+|----------|:--------:|:-------:|--------|
+| **Accuracy** | **9.5/10** | **9/10** | Both models provide technically accurate information. ChatGPT explains concepts more clearly, while Gemini includes additional technical details. |
+| **Creativity** | **8.5/10** | **9.5/10** | Gemini presents richer diagrams, architectural insights, and more detailed explanations, making its responses more creative. |
+| **Hallucination** | **9.5/10** | **9/10** | ChatGPT generally stays closer to well-established concepts, whereas Gemini occasionally includes advanced implementation details that may require verification. |
+| **Reasoning** | **9/10** | **9.5/10** | Gemini demonstrates deeper reasoning by explaining architectural choices, trade-offs, and implementation concepts. ChatGPT focuses on conceptual clarity. |
+| **Speed** | **10/10** | **9/10** | ChatGPT typically generates concise responses faster. Gemini's responses are more detailed and therefore slightly slower to review. |
+| **Engineering Usefulness** | **9/10** | **9.5/10** | Gemini provides implementation insights, mathematical intuition, and deployment considerations, making it more useful for engineering tasks. ChatGPT is excellent for learning fundamentals. |
+
+### Overall Comparison
+
+| Model | Overall Score | Best For |
+|-------|:-------------:|----------|
+| **ChatGPT** | **9.3/10** | Clear explanations, quick learning, assignments, and beginner-friendly content. |
+| **Gemini** | **9.4/10** | Technical depth, architecture analysis, engineering reports, and advanced learning. |
+
+- **ChatGPT** is best for concise, accurate, and beginner-friendly explanations.
+- **Gemini** is better suited for detailed technical analysis and engineering-focused content.
+- Combining **ChatGPT** for foundational concepts and **Gemini** for advanced technical insights provides the most comprehensive report.
