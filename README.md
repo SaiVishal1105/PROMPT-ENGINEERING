@@ -670,7 +670,7 @@ A **Large Language Model (LLM)** is a deep learning model trained on massive amo
 
 Building a modern, instruction-following LLM involves four distinct sequential stages:
 
-# Conclusion
+---
 ## Comparison of ChatGPT and Gemini
 
 | Criteria | ChatGPT | Gemini | Reason |
@@ -689,6 +689,7 @@ Building a modern, instruction-following LLM involves four distinct sequential s
 | **ChatGPT** | **9.3/10** | Clear explanations, quick learning, assignments, and beginner-friendly content. |
 | **Gemini** | **9.4/10** | Technical depth, architecture analysis, engineering reports, and advanced learning. |
 
+# Conclusion
 - **ChatGPT** is best for concise, accurate, and beginner-friendly explanations.
 - **Gemini** is better suited for detailed technical analysis and engineering-focused content.
 - Combining **ChatGPT** for foundational concepts and **Gemini** for advanced technical insights provides the most comprehensive report.
