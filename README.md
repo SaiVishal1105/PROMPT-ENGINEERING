@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ad35a8dc-e942-455a-b061-4a1929456b51" /># Aim:	Comprehensive Report on the Fundamentals of Generative AI and Large Language Models (LLMs)
+# Aim:	Comprehensive Report on the Fundamentals of Generative AI and Large Language Models (LLMs)
 ## Experiment:
 Develop a comprehensive report for the following exercises:
 1.	Explain the foundational concepts of Generative AI. 
@@ -592,5 +592,82 @@ $$\text{Loss}(N, D, C) \propto \left(\frac{N_c}{N}\right)^{\alpha_N} + \left(\fr
 ## Diagram
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/43f28e2b-d7f4-478a-aa3c-f808270fa437" />
 
---
+---
+## 5.     Explain about LLM and how it is build.
+## ChatGPT
+# Large Language Models (LLMs) and How They Are Built
+
+## Introduction
+A **Large Language Model (LLM)** is an advanced Artificial Intelligence (AI) model trained on massive amounts of text data to understand, generate, summarize, translate, and answer questions in natural language. LLMs are primarily based on the **Transformer architecture**, which enables them to understand context and relationships between words.
+
+---
+
+## What is an LLM?
+
+An LLM is designed to predict the next word (or token) in a sequence based on the context of previous words. Through this process, it learns grammar, facts, reasoning patterns, and language structure.
+
+**Examples:**
+- ChatGPT (GPT)
+- Gemini
+- Claude
+- Llama
+
+---
+
+## How an LLM is Built
+
+### 1. Data Collection
+Large volumes of text are collected from books, websites, articles, research papers, and publicly available datasets.
+
+### 2. Data Preprocessing
+The collected data is cleaned, formatted, and converted into **tokens** (small units of text) that the model can process.
+
+### 3. Model Training
+A Transformer-based neural network is trained using powerful GPUs/TPUs. During training, the model learns language patterns by predicting the next token in a sequence.
+
+### 4. Fine-Tuning
+The pre-trained model is further trained on specific datasets to improve performance for specialized tasks such as coding, healthcare, or customer support.
+
+### 5. Evaluation and Deployment
+The model is tested for accuracy, safety, and reliability before being deployed as applications like chatbots, virtual assistants, or AI-powered tools.
+
+---
+
+## Key Components
+- **Transformer Architecture** – Understands context using self-attention.
+- **Tokens** – Units of text processed by the model.
+- **Parameters** – Learned weights that store the model's knowledge.
+- **Training Data** – Large datasets used to teach the model.
+- **Inference** – The process of generating responses after training.
+
+---
+
+## Applications
+- Conversational AI and chatbots
+- Content writing and summarization
+- Code generation and debugging
+- Language translation
+- Question answering
+- Education and tutoring
+
+---
+
+## Gemini
+
+## Large Language Models (LLMs): Definition & Build Pipeline
+
+A technical reference guide explaining what Large Language Models (LLMs) are and the end-to-end pipeline used to build them.
+
+---
+
+## 📌 What is an LLM?
+
+A **Large Language Model (LLM)** is a deep learning model trained on massive amounts of text data to understand, generate, and process human language. Built on the **Transformer architecture**, LLMs function as probabilistic engines that predict the most likely next word (or token) given a context sequence.
+
+---
+
+## 🏗️ How an LLM is Built (The 4-Stage Pipeline)
+
+Building a modern, instruction-following LLM involves four distinct sequential stages:
+
 # Result
