@@ -148,10 +148,6 @@ A neural network architecture that enables AI models to understand context, maki
 
 ---
 
-## Conclusion
-Generative AI is transforming the way people create and interact with digital content. By combining machine learning, deep learning, neural networks, and transformer-based models, it can generate high-quality text, images, audio, and code. As the technology continues to evolve, responsible and ethical use will remain essential.
-
-
 ## Gemini:
 
 ## Generative AI Core Concepts
@@ -189,4 +185,29 @@ Unlike **Traditional AI** (which focuses on analyzing or classifying existing da
 ---
 
 ## ⚙️ 3. How Models Processing Works
+Raw Input Text ──> [ Tokenization ] ──> [ Embeddings ] ──> [ Model Inference ] ──> Probability Map ──> Output Token
+
+
+1. **Tokenization:** Breaks down raw text/media into standard numerical units (tokens).
+2. **Embeddings:** Maps tokens into high-dimensional mathematical vector spaces where similar concepts cluster together.
+3. **Inference & Sampling:** Predicts the most mathematically probable next token using parameters like **Temperature** (controlling randomness vs. determinism).
+
+---
+
+## 🚀 4. Training & Adaptation Lifecycle
+
+1. **Pre-training (Foundation Models):** Unsupervised learning on massive datasets (e.g., public internet) to absorb general knowledge and language syntax.
+2. **Fine-Tuning:** Adapting a broad pre-trained model to specialized tasks or domains.
+3. **RLHF (Reinforcement Learning from Human Feedback):** Aligning raw model behavior with human intent, safety, and helpfulness through human scoring.
+
+---
+
+## ⚠️ 5. Key Limitations
+
+* **Hallucinations:** Generating plausible-sounding but factually incorrect or fabricated statements.
+* **Context Windows:** Finite limit on how much token data a model can read or remember at once.
+* **Bias Acceleration:** Propagating or amplifying existing biases present in the training corpus.
+
+
+
 # Result
