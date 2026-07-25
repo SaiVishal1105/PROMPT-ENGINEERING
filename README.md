@@ -207,7 +207,168 @@ Raw Input Text ──> [ Tokenization ] ──> [ Embeddings ] ──> [ Model I
 * **Hallucinations:** Generating plausible-sounding but factually incorrect or fabricated statements.
 * **Context Windows:** Finite limit on how much token data a model can read or remember at once.
 * **Bias Acceleration:** Propagating or amplifying existing biases present in the training corpus.
+---
+## 2.	Focusing on Generative AI architectures. (like transformers).
+## ChatGPT:
+# Generative AI Architectures
+
+## Introduction
+Generative AI architectures are the underlying neural network designs that enable AI models to learn patterns from data and generate new content such as text, images, audio, and code. Different architectures are optimized for different types of tasks.
+
+---
+
+## 1. Transformers
+Transformers are the most widely used architecture in modern Generative AI. They use a mechanism called **self-attention** to understand the relationships between words or data elements, allowing them to generate coherent and context-aware outputs.
+
+**Applications:**
+- Text generation
+- Chatbots
+- Machine translation
+- Code generation
+
+**Examples:**
+- GPT
+- BERT
+- Gemini
+- Claude
+
+---
+
+## 2. Generative Adversarial Networks (GANs)
+GANs consist of two neural networks:
+- **Generator** – Creates new data.
+- **Discriminator** – Determines whether the generated data is real or fake.
+
+Both networks improve by competing with each other, resulting in realistic generated content.
+
+**Applications:**
+- Image generation
+- Face synthesis
+- Image enhancement
+- Deepfake creation
+
+---
+
+## 3. Variational Autoencoders (VAEs)
+VAEs learn compressed representations of data and generate new samples by reconstructing them from a latent space. They produce smooth and meaningful variations of the original data.
+
+**Applications:**
+- Image generation
+- Data compression
+- Anomaly detection
+
+---
+
+## 4. Diffusion Models
+Diffusion models generate data by gradually removing noise from random input until a clear output is produced. They are known for producing highly realistic images.
+
+**Applications:**
+- AI art generation
+- Image editing
+- Text-to-image generation
+
+**Examples:**
+- Stable Diffusion
+- DALL·E
+
+---
+
+## Comparison of Architectures
+
+| Architecture | Primary Use | Strength |
+|--------------|-------------|----------|
+| Transformers | Text, code, chat | Understands context using self-attention |
+| GANs | Image generation | Produces realistic images |
+| VAEs | Data generation | Efficient latent representation |
+| Diffusion Models | Image synthesis | High-quality image generation |
+
+---
+## Architecture Diagram
+
+<img width="1402" height="1122" alt="image" src="https://github.com/user-attachments/assets/9b9ff8cd-66f7-4c15-8f2a-b30629970218" />
+
+---
+## Gemini:
+## Generative AI Architectures: Deep Dive
+
+A technical reference breakdown of the foundational model architectures driving modern Generative AI.
+
+---
+
+## 🏗️ Comparative Overview
+
+| Architecture | Core Paradigm | Primary Modality | Strengths | Trade-offs |
+| :--- | :--- | :--- | :--- | :--- |
+| **Transformers** | Self-Attention Mechanism | Text, Code, Multimodal | Long-range context, parallel training | $O(N^2)$ memory scaling with sequence length |
+| **Diffusion Models** | Iterative Noise Reduction | Images, Video, Audio | High sampling quality, stable training | Slow inference (requires many denoising steps) |
+| **GANs** | Adversarial Competition | Images, Style Transfer | Fast single-step inference, crisp details | Unstable training (mode collapse, non-convergence) |
+| **VAEs** | Probabilistic Autoencoding | Compression, Synthetic Data | Fast inference, smooth latent space | Tendency to produce blurry outputs |
+| **Flow-Based / Flow Matching** | Invertible Transformations | Audio, 3D, Fast Images | Exact likelihood computation, smooth trajectories | High parameter counts, complex inversion maths |
+
+---
+
+## ⚡ 1. Transformers (Attention-Based)
+
+The backbone of modern LLMs (e.g., GPT series, Llama, Claude) and visual transformers (ViT).
+
+Input Tokens ──> Embedding + Positional Encoding ──> Multi-Head Attention ──> Feed Forward ──> Output Probabilities
 
 
+* **Key Innovation**: **Self-Attention Mechanism** — evaluates the relationship between *every* token in a sequence simultaneously, replacing traditional sequential processing (RNNs/LSTMs).
+* **Math Intuition**: Computes attention using Query ($Q$), Key ($K$), and Value ($V$) matrices:
+  $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+* **Best For**: Sequential data processing, context understanding, code generation, and cross-modal tasks.
+
+---
+
+## 🎨 2. Diffusion Models
+
+Powers leading image and video models (e.g., Stable Diffusion, Midjourney, Sora).
+
+[Clean Image] ──(Forward: Add Gaussian Noise)──> [Pure Noise] ──(Reverse: Learn Denoising Steps)──> [Generated Image]
+
+
+* **Forward Process**: Gradually adds random Gaussian noise to input data over $T$ steps until it becomes pure noise.
+* **Reverse Process**: A neural network (often a **U-Net** or **Diffusion Transformer (DiT)**) learns to predict and subtract that noise step-by-step to reconstruct clear data.
+* **Best For**: High-fidelity visual asset generation, audio synthesis, and image-to-image editing.
+
+---
+
+## ⚔️ 3. Generative Adversarial Networks (GANs)
+
+A zero-sum game between two competing neural networks.
+
+Noise Vector ──> [ Generator ] ──> Fake Sample ┐
+├──> [ Discriminator ] ──> Real or Fake?
+Real Data  ─────────────────┘
+
+
+* **Generator**: Tries to produce realistic synthetic data.
+* **Discriminator**: Acts as a critic, attempting to distinguish real training samples from generated fake samples.
+* **Best For**: Real-time image generation, face synthesis, style transfer, and super-resolution upscaling.
+
+---
+
+## 📦 4. Variational Autoencoders (VAEs)
+
+Probabilistic models designed for data compression and representation learning.
+
+Input (x) ──> [ Encoder ] ──> Latent Distribution (μ, σ) ──> [ Sample z ] ──> [ Decoder ] ──> Output (x')
+
+
+* **Encoder**: Maps high-dimensional input into a compressed **latent space** as a continuous probability distribution ($\mu$ and $\sigma$).
+* **Decoder**: Samples from this distribution to reconstruct the original data.
+* **Best For**: Anomaly detection, dataset interpolation, and latent space representation (frequently used inside Latent Diffusion pipelines).
+
+---
+
+## 🛠️ Hybrid Architectures
+
+Modern GenAI systems rarely rely on a single pure architecture:
+* **Diffusion Transformers (DiT)**: Combines Transformer self-attention blocks with Diffusion denoising processes (used for scalable video and image generation).
+* **Latent Diffusion Models (LDM)**: Uses a VAE to compress images into a smaller latent space first, then runs a Diffusion Model inside that compressed space to save compute resources.
+
+## System Architecture
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/2950f981-41e2-4798-befd-77ffc7d36718" />
 
 # Result
